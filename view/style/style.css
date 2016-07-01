@@ -1,0 +1,33 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.schedules {
+  display: block;
+}
+.schedule-row {
+  display: block;
+  width: 90em;
+  background-color: #F3F4F2;
+  margin: .2em 0;
+  padding: 0 5%;
+}
+.schedule-row:nth-child(2n) {
+  background-color: #f3f8fa;
+}
+.schedule-cell {
+  display: inline-block;
+  padding: .5em;
+}
+
+.schedule-cell h4 {
+  margin: 1em 0;
+}
+
+.form {
+  padding: 0 .5em;
+}
+
+.form input {
+  margin: 0 .5em;
+}
