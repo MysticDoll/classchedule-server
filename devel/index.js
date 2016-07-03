@@ -1,6 +1,7 @@
 "use strict";
 const renderer = require("./render");
 const find = document.querySelector.bind(document);
+const findAll = document.querySelectorAll.bind(document);
 const schedule = {
   VM: null
 };
@@ -17,6 +18,11 @@ Object.defineProperties(schedule, {
 
 window.addEventListener("load", function() {
   if(schedule.value) schedule.VM = renderer(schedule);
+  Array.from(findAll(".form input")).forEach(e => {
+    e.addEventListener("keydown", function(e) {
+      if(e.keyCode === 13) find("#getSchedule").click();
+    });
+  });
   find("#getSchedule").addEventListener("click", function() {
     const data = {id: find("#id").value, password:find("#password").value};
     const xhr = new XMLHttpRequest();
