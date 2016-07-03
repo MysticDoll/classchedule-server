@@ -2,15 +2,40 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>ClasSchedule</title>
     <script src="./js/main.js"></script>
     <link rel="stylesheet" href="./style/style.css" type="text/css" media="screen" charset="utf-8">
   </head>
   <body>
+    <h1>Class 時間割取得</h1>
+    <section class="description">
+      <h2>使い方</h2>
+      <div>
+        <p>
+          学籍番号, パスワードを入力すると、Classにサーバ経由でログインし、時間割データを取得します
+        </p>
+        <p>
+          その後、時間割が表示されるので、講義名や教室名を編集します。
+          時間割データは画面下部に表示される保存、ダウンロードを押すたびにブラウザに保存されます。
+        </p>
+        <p>
+          画面下部のダウンロードを押すとiCalendar形式で時間割データをダウンロードできます。
+          一度時間割を取得したら、次回来た時には自動で表示されます。
+        </p>
+        <p>
+          現在(開発者が面倒なので)は、時間割はその時期の時間割しか取得しません。気が向いたら実装します
+        </p>
+      </div>
+    </section>
     <div class="form">
       <label>学籍番号</label><input type="text" id="id">
       <label>パスワード</label><input type="password" id="password">
       <input type="button" value="取得" id="getSchedule">
     </div>
     <div id="schedule"></div>
+    <footer>
+      <h3>License</h3>
+      <p>MIT License copyright (c) 2016 Mitsuru Takigahira</p>
+    </footer>
   </body>
 </html>

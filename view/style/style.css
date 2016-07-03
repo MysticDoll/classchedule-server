@@ -20,6 +20,15 @@
   padding: .5em;
 }
 
+.schedule-cell.schedule-days {
+  padding: 0 5em;
+}
+
+.schedule-cell.schedule-period {
+  vertical-align: top;
+  padding: 4em 0;
+}
+
 .schedule-cell h4 {
   margin: 1em 0;
 }
